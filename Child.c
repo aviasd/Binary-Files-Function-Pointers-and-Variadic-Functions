@@ -7,7 +7,7 @@
 #include "sort.h"
 FILETYPE fileType;
 /****************************************************/
-/*             Read a Child from a file				*/
+/*             Read a Child from a file		    */
 /****************************************************/
 void readChild(FILE* fp, Child* pChild) {
 	//Child ID
@@ -23,7 +23,7 @@ void readChild(FILE* fp, Child* pChild) {
 }
 
 /****************************************************/
-/*            show a Child							*/
+/*            show a Child			    */
 /****************************************************/
 void showChild(const Child* pChild) {
 	printf("\nID:%d  ", pChild->id);
@@ -31,7 +31,7 @@ void showChild(const Child* pChild) {
 }
 
 /****************************************************/
-/*            get a Child From User 				*/
+/*            get a Child From User 		    */
 /****************************************************/
 void getChildFromUser(Child* pChild, int id) {
 	pChild->id = id;
@@ -41,7 +41,7 @@ void getChildFromUser(Child* pChild, int id) {
 }
 
 /****************************************************/
-/*		Write a Child to the open file				*/
+/*		Write a Child to the open file	    */
 /****************************************************/
 void writeChild(FILE* fp, const Child* pChild) {
 	unsigned short binarydata;
