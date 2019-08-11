@@ -1,4 +1,3 @@
-
 #ifndef LIST_H_
 #define LIST_H_
 #include "City.h"
@@ -7,7 +6,6 @@
 typedef void* DATA;
 
 //NODE
-
 typedef struct d_node{
 	DATA key;
 	struct d_node* next;
