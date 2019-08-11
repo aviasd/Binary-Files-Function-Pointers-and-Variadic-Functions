@@ -1,4 +1,3 @@
-
 #include <stdlib.h>
 #include "Kindergarten.h"
 #include "Child.h"
@@ -20,16 +19,19 @@ void insertionSort(void* arr, int size, int length,
 		memcpy(arr + (j + 1) * size, key, size);
 	}
 }
+
 int compareGardenByName(const void* st1, const void* st2) {
 	const Garden* pg1 = *(const Garden**) st1;
 	const Garden* pg2 = *(const Garden**) st2;
 	return strcmp(pg1->name, pg2->name);
 }
+
 int compareChildByiD(const void* st1, const void* st2) {
 	const Child* pg1 = *(const Child**) st1;
 	const Child* pg2 = *(const Child**) st2;
 	return pg1->id - pg2->id;
 }
+
 int compareGardenByTypeAndCountChild(const void* st1, const void* st2) {
 	int type;
 	const Garden* pg1 = *(const Garden**) st1;
