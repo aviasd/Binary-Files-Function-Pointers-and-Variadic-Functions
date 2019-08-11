@@ -1,4 +1,3 @@
-
 #include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,6 +10,7 @@ int listInit(DLIST* plist) {
 	return 1;
 
 }
+
 // add new node after *pNode
 D_NODE* listInsert(D_NODE* pnode, DATA value) {
 	D_NODE* tmp;
@@ -41,6 +41,7 @@ DLIST createLinkedListForKindergartenType(const City* city, int type) {
 	return list;
 
 }
+
 void displayKindergartensFroList(const DLIST* list) {
 	int i;
 	D_NODE* node;
@@ -52,6 +53,7 @@ void displayKindergartensFroList(const DLIST* list) {
 	}
 
 }
+
 void gardensLinkedList(const City* pCity) {
 	DLIST list;
 	GardenType type;
@@ -61,6 +63,7 @@ void gardensLinkedList(const City* pCity) {
 	releaseKindergartensLinkedList(&list);
 
 }
+
 void releaseKindergartensLinkedList(DLIST* list) {
 	D_NODE *node = list->head.next;
 	if (!list)
