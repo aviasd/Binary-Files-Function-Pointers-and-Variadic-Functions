@@ -10,7 +10,7 @@ const char* GardenTypeName[NofTypes] = { "Chova", "Trom Chova",
 		"Trom Trom Chova" };
 
 //**************************************************
-// Read data off all Kindergartens from file
+// Read data off all Kindergartens from file	   *
 //**************************************************
 Garden** readAllGardensFromFile(char* fileName, int* pGardenCount) {
 	int count, i;
@@ -56,7 +56,7 @@ Garden** readAllGardensFromFile(char* fileName, int* pGardenCount) {
 }
 
 /**************************************************/
-/*             Read a Kindergarten from a file           */
+/*      Read a Kindergarten from a file           */
 /**************************************************/
 void readGarden(FILE* fp, Garden* pGarden) {
 	int i, type;
@@ -110,7 +110,7 @@ void readGarden(FILE* fp, Garden* pGarden) {
 }
 
 /**************************************************/
-/*            show all Kindergartens		      */
+/*            show all Kindergartens	          */
 /**************************************************/
 void showAllGardens(Garden** pGardenList, int count) {
 	int i;
@@ -129,7 +129,7 @@ void showAllGardens(Garden** pGardenList, int count) {
 }
 
 /**************************************************/
-/*            show a Kindergarten		           */
+/*            show a Kindergarten                 */
 /**************************************************/
 void showGarden(const Garden* pGarden) {
 	int i;
@@ -144,8 +144,7 @@ void showGarden(const Garden* pGarden) {
 }
 
 /**************************************************/
-/*  write Kindergartens to a file					   */
-
+/*  write Kindergartens to a file     	          */
 /**************************************************/
 
 void writeGardensToFile(Garden** pGardenList, int gardenCount, char* fileName) {
@@ -175,7 +174,7 @@ void writeGardensToFile(Garden** pGardenList, int gardenCount, char* fileName) {
 }
 
 /**************************************************/
-/*Write a Kindergarten to the open file						*/
+/*	Write a Kindergarten to the open file     */
 /**************************************************/
 void writeGarden(FILE* fp, const Garden* pGarden) {
 	int namelength = 0, i;
@@ -201,7 +200,7 @@ void writeGarden(FILE* fp, const Garden* pGarden) {
 }
 
 //*************************************************
-// menu option to add Child to a Kindergarten
+// menu option to add Child to a Kindergarten	  *
 //*************************************************
 void addChildToGarden(Garden** pGardenList, int gardenCount) {
 	Garden* pGarden;
@@ -228,10 +227,10 @@ void addChildToGarden(Garden** pGardenList, int gardenCount) {
 	pGarden->childCount++;
 }
 
-/**************************************************/
+/**********************************************************/
 /* Add a Kindergarten  - we need to allocate more space   */
-/* in the list.									*/
-/**************************************************/
+/* in the list.					    	  */
+/**********************************************************/
 Garden** addGarden(Garden** pGardenList, int* pGardenCount) {
 	pGardenList = (Garden**) realloc(pGardenList,
 			(*pGardenCount + 1) * sizeof(Garden*));
@@ -352,9 +351,9 @@ void getGardenFromUser(Garden* pGarden, Garden** pGardenList, int count) {
 }
 
 /********************************************************/
-/* Init a child from use. Ask for Id, check it is		*/
+/* Init a child from use. Ask for Id, check it is	*/
 /* new and after call the function to ask for all other */
-/* information											*/
+/* information						*/
 /********************************************************/
 void getChildCheckIdFromUser(Child* pChild, const Garden* pGarden) {
 	int id, bOK = 0;
