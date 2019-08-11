@@ -412,4 +412,3 @@ void release(Garden** pGardenList, int count) {
 	free(pGardenList);
 
 }
-
